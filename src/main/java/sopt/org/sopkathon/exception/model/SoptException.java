@@ -14,6 +14,7 @@ public class SoptException extends RuntimeException {
         this.error = error;
     }
 
+
     public int getHttpStatus() {
         return error.getHttpStatusCode();
     }

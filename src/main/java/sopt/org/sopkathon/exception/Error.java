@@ -17,9 +17,8 @@ public enum Error {
     /**
      * 404 NOT FOUND
      */
-    NOT_FOUND_PIN_EXCEPTION(HttpStatus.NOT_FOUND, "존재하지 않는 게시글입니다"),
     NOT_FOUND_USER_EXCEPTION(HttpStatus.NOT_FOUND, "존재하지 않는 유저입니다"),
-    NOT_FOUND_FOLLOWED_USER_EXCEPTION(HttpStatus.NOT_FOUND, "존재하지 않는 유저이므로 팔로우할 수 없습니다"),
+    NOT_FOUND_GROUP_EXCEPTION(HttpStatus.NOT_FOUND, "존재하지 않는 그룹입니다"),
 
     /**
      * 409 CONFLICT
