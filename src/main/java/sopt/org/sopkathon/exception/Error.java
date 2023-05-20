@@ -14,6 +14,7 @@ public enum Error {
      */
     REQUEST_VALIDATION_EXCEPTION(HttpStatus.BAD_REQUEST, "잘못된 요청입니다"),
     VALIDATION_REQUEST_MISSING_EXCEPTION(HttpStatus.BAD_REQUEST, "요청값이 입력되지 않았습니다."),
+    USER_LIFE_ALREADY_ZERO(HttpStatus.BAD_REQUEST, "이미 수명이 0이어서 고발이 불가합니다."),
 
 
     /**
@@ -21,11 +22,6 @@ public enum Error {
      */
     NOT_FOUND_USER_EXCEPTION(HttpStatus.NOT_FOUND, "존재하지 않는 유저입니다"),
     NOT_FOUND_GROUP_EXCEPTION(HttpStatus.NOT_FOUND, "존재하지 않는 그룹입니다"),
-
-    /**
-     * 409 CONFLICT
-     */
-    ALREAD_SAVED_PIN(HttpStatus.CONFLICT, "이미 저장한 핀입니다"),
 
     /**
      * 500 INTERNAL SERVER ERROR
