@@ -3,6 +3,7 @@ package sopt.org.sopkathon.service;
 import javax.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import sopt.org.sopkathon.controller.dto.response.GetGroupResponseDto;
 import sopt.org.sopkathon.domain.User;
 import sopt.org.sopkathon.exception.Error;
 import sopt.org.sopkathon.exception.model.NotFoundException;
@@ -23,4 +24,5 @@ public class UserService {
         user.reported();
         userRepository.save(user);
     }
+
 }
