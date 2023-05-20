@@ -16,6 +16,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -26,7 +27,10 @@ public class User {
     @Column(nullable = false)
     private int life;
 
+    @Column(nullable = false)
+    private boolean isHost;
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="group_id")
+    @JoinColumn(name = "group_id")
     private Group group;
 }
