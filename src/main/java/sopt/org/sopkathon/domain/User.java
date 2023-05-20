@@ -33,4 +33,8 @@ public class User {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "group_id")
     private Group group;
+
+    public void reported() {
+        this.life = this.life - 1;
+    }
 }
