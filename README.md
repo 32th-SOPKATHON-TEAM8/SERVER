@@ -1,12 +1,16 @@
-# SERVER
-32기 GO SOPT 솝커톤 서버 레포지토리
+# 🚪 진실의 방으로
+32기 GO SOPT 솝커톤 8조
 
+## 🐣 서팟 갓기들 ><
 
+<img width="500" alt="image" src="https://github.com/32th-SOPKATHON-TEAM8/SERVER/assets/78674565/25c8e71d-6832-41a3-a6ee-091eee56413b">
 
-## 1. 협업 룰 세팅
+## 🦄 1. 협업 룰 세팅
+
+--- 
 
 ### 1. 코드 컨벤션
-
+    
 - **Status ENUM명**
     - `Http Method 명` + `___` + `SUCCESS/FAIL`
     - ex. 생성: POST_GROUP_SUCCESS  조회: GET_GROUP_SUCCESS
@@ -14,7 +18,7 @@
     - 카멜 케이스
     - ex) userId
     - **Indentation**
-        - 탭의 크기는 4개의 스페이스
+        - 탭의 크기는 4개의 스페이스    
 - **Braces**
     - K&R 스타일로 중괄호 선언
         
@@ -112,11 +116,11 @@
         ```
         
 
-### 2. 깃 컨벤션
+### 🐰 2. 깃 컨벤션
 
 - 브랜치 전략
        
-    ![image](https://github.com/32th-SOPKATHON-TEAM8/SERVER/assets/78674565/c801315a-d72d-49de-9fb3-40be7cf90fae)
+<img width="400" alt="image" src="https://github.com/32th-SOPKATHON-TEAM8/SERVER/assets/78674565/c801315a-d72d-49de-9fb3-40be7cf90fae">
 
 - 이슈 생성 → 브랜치 생성 → 개발 → pr 생성 → develop 브랜치에 머지
     - 이슈와 pr은 생성해둔 탬플릿 대로 입력
@@ -139,15 +143,15 @@
     - ♻️ `[REFACTOR]` : 전면 수정
     - 🔀 `[MERGE]`: 다른 브랜치와 병합
 
-## 2. ERD 및 프로젝트 구조
+## 🐶 2. ERD 및 프로젝트 구조
 
 ---
 
-### 1. ERD
+### 🐼 1. ERD
 
 ![image](https://github.com/32th-SOPKATHON-TEAM8/SERVER/assets/78674565/f0fc467f-3625-43e8-9498-40bf67dd847b)
 
-### 2. 프로젝트 구조
+### 🗂 2. 프로젝트 구조
 
 ```
 🗂 sopkathon
@@ -165,7 +169,7 @@
     🗂 service (비즈니스로직이 있는 서비스 계층)
 ```
 
-## 3. 팀원 역할 분배 + 사진
+## 👩‍💻 3. 팀원 역할 분배
 
 ---
 
@@ -177,7 +181,3 @@
 | API 명세서 | 정준서, 박예준 |
 | API 개발  [GET] /group  | 박예준 |
 | API 개발 [PATCH] /report | 정준서 |
-
-### 2. 사진
-
-<img width="653" alt="image" src="https://github.com/32th-SOPKATHON-TEAM8/SERVER/assets/78674565/25c8e71d-6832-41a3-a6ee-091eee56413b">
