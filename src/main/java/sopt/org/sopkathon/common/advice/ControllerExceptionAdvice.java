@@ -3,6 +3,7 @@ package sopt.org.sopkathon.common.advice;
 import java.util.Objects;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -25,6 +26,11 @@ public class ControllerExceptionAdvice {
         return ApiResponse.error(Error.REQUEST_VALIDATION_EXCEPTION, String.format("%s는 %s", fieldError.getField(), fieldError.getDefaultMessage()));
     }
 
+    @ExceptionHandler(HttpMessageNotReadableException.class)
+    protected ApiResponse<Object> handlerHttpMessageNotReadableException(final HttpMessageNotReadableException e) {
+        return ApiResponse.error(Error.VALIDATION_REQUEST_MISSING_EXCEPTION, Error.VALIDATION_REQUEST_MISSING_EXCEPTION.getMessage());
+    }
+
     /**
      * 500 Internal Server
      */
@@ -34,6 +40,7 @@ public class ControllerExceptionAdvice {
         System.out.println(e.getMessage());
         return ApiResponse.error(Error.INTERNAL_SERVER_ERROR);
     }
+
 
     /**
      * Sopt custom error
