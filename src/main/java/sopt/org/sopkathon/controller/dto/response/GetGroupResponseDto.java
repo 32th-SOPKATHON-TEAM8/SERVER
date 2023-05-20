@@ -7,7 +7,6 @@ import lombok.Getter;
 import sopt.org.sopkathon.domain.Group;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Getter
 @Builder
@@ -18,9 +17,10 @@ public class GetGroupResponseDto {
 
     private String penalty;
 
-    public static GetGroupResponseDto of(Group group) {
+    public static GetGroupResponseDto of(Group group, List<UserResponseDto> userList) {
+
         return GetGroupResponseDto.builder()
-                .user(group.getUserList().stream().map(UserResponseDto::of).collect(Collectors.toList()))
+                .user(userList)
                 .penalty(group.getPenalty())
                 .build();
     }

@@ -8,5 +8,4 @@ import java.util.Optional;
 public interface GroupRepository extends Repository<Group, Long> {
 
     public Optional<Group> findById(Long groupId);
-
 }
