@@ -2,7 +2,6 @@ package sopt.org.sopkathon.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import sopt.org.sopkathon.controller.dto.request.GetGroupRequestDto;
 import sopt.org.sopkathon.controller.dto.response.GetGroupResponseDto;
 import sopt.org.sopkathon.domain.Group;
 import sopt.org.sopkathon.exception.Error;
@@ -15,8 +14,8 @@ public class GroupService {
 
     private final GroupRepository groupRepository;
 
-    public GetGroupResponseDto getGroupInfo(GetGroupRequestDto request) {
-        Group group = groupRepository.findById(request.getGroupId()).orElseThrow(
+    public GetGroupResponseDto getGroupInfo(Long groupId) {
+        Group group = groupRepository.findById(groupId).orElseThrow(
                 () -> new NotFoundException(Error.NOT_FOUND_GROUP_EXCEPTION, Error.NOT_FOUND_GROUP_EXCEPTION.getMessage())
         );
 
