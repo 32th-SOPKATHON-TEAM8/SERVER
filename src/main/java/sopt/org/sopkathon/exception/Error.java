@@ -14,6 +14,7 @@ public enum Error {
      */
     REQUEST_VALIDATION_EXCEPTION(HttpStatus.BAD_REQUEST, "잘못된 요청입니다"),
     VALIDATION_REQUEST_MISSING_EXCEPTION(HttpStatus.BAD_REQUEST, "요청값이 입력되지 않았습니다."),
+    USER_LIFE_ALREADY_ZERO(HttpStatus.BAD_REQUEST, "이미 수명이 0이어서 고발이 불가합니다."),
 
 
     /**

@@ -11,6 +11,8 @@ import javax.persistence.ManyToOne;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import sopt.org.sopkathon.exception.Error;
+import sopt.org.sopkathon.exception.model.BadRequestException;
 
 @Entity
 @Getter
@@ -35,6 +37,10 @@ public class User {
     private Group group;
 
     public void reported() {
+        if (this.life == 0) {
+            throw new BadRequestException(Error.USER_LIFE_ALREADY_ZERO,
+                Error.USER_LIFE_ALREADY_ZERO.getMessage());
+        }
         this.life = this.life - 1;
     }
 }
