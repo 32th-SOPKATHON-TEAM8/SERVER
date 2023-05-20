@@ -2,12 +2,8 @@ package sopt.org.sopkathon.domain;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,6 +11,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Table(name = "\"group\"")
 public class Group {
 
     @Id
@@ -30,6 +27,6 @@ public class Group {
     @Column
     private String penalty;
 
-    @OneToMany(mappedBy="group")
+    @OneToMany(mappedBy = "group")
     private List<User> userList = new ArrayList<>();
 }

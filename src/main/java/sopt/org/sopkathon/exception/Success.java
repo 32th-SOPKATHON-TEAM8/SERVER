@@ -12,6 +12,7 @@ public enum Success {
     /**
      * 200 OK
      */
+    GET_GROUP_INFO_SUCCESS(HttpStatus.OK, "그룹 정보 조회 성공"),
     GET_CATEGORY_SUCCESS(HttpStatus.OK, "카테고리 조회 성공"),
     ;
 
